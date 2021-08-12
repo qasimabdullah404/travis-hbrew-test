@@ -1,0 +1,20 @@
+dist:
+  bionic
+
+os:
+- linux
+- osx
+
+addons:
+  homebrew:
+    packages:
+    - bats-core
+    - shellcheck
+    - yq
+
+language: minimal
+
+before_install:
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo snap install yq; fi
+
+script: true
