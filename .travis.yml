@@ -4,18 +4,12 @@ dist:
 os:
 - linux
 - osx
-osx_image: xcode12.5
-
-addons:
-  homebrew:
-    packages:
-    - bats-core
-    - shellcheck
-    - yq
-
 language: minimal
 
 before_install:
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo snap install yq; fi
+- brew install bats-core
+- brew install shellcheck
+- brew install yq
 
 script: true
