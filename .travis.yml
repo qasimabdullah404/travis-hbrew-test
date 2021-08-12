@@ -8,8 +8,8 @@ language: minimal
 
 before_install:
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo snap install yq; fi
-- brew install bats-core
-- brew install shellcheck
-- brew install yq
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install bats-core; fi
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install shellcheck; fi
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install yq; fi
 
 script: true
