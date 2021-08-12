@@ -7,6 +7,7 @@ os:
 
 addons:
   homebrew:
+    update: true
     packages:
     - bats-core
     - shellcheck
