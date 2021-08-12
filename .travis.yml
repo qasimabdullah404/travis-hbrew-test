@@ -4,10 +4,10 @@ dist:
 os:
 - linux
 - osx
+osx_image: xcode11
 
 addons:
   homebrew:
-    update: true
     packages:
     - bats-core
     - shellcheck
